@@ -41,10 +41,10 @@ Abonnieren mit Funktions-Verknüpfung:        4
 | bool **wifiConnected** ();  | Überprüft, ob automatisch eine WLAN-Verbindung zu einer Station hergestellt wurde (Zeitersparnis gegenüber neue Verbindung bei bekannter Station) |
 | bool **getIpMac** (String &amp;ip, String &amp;mac); | Liefert IP und MAC-Adresse des Boards. Parameter werden als Referenz übergeben |
 | String **getIp** (); | Ermittelt die IP/IPs des Boards (_AT+CIFSR_)
- |
+|   |   |
 | boolean **newConnection** (int id, String type, String ip , unsigned int port); | Baut eine neue Verbindung (TCP oder UDP) auf. Parameter: Verbindungs-ID (0-4), Typ (TCP/UDP), IP (Ziel IP oder Adresse), Port |
 | boolean **closeConnection** (int id) ; | Trennt die Verbindung mit der angegebenen Verbindungs-ID
- |
+|   |   |
 | boolean **startUdpServer** (int id, String ip , unsigned int port, unsigned int recvport, int mode=0);  | Öffnet eine UDP-Verbindung Der Empfangs-Port kann ein anderer sein als der Sende-Port. Modus 0: Die Ziel IP ändert sich nicht Modus 1: die Ziel IP ändert sich einmal, wenn das Board eine Nachricht von einer anderen IP erhält. Modus 2: Das Board ändert die Ziel IP immer, wenn es eine neue Nachricht von einer anderen IP erhalten hat. |
 | boolean **endUdpServer** (int id);    | Beendet die UDP-Verbindung mit der angegeben ID |
 | boolean **startTcpServer** (unsigned int port) ; | Startet einen TCP-Server unter dem angegeben Port. Es kann nur ein TCP-Server aktiviert sein |
